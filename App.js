@@ -55,7 +55,7 @@ export default function App() {
     </SafeAreaView>
   );
 }
-// abc
+
 
 const styles = StyleSheet.create({
   container: {
