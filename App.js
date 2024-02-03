@@ -28,9 +28,7 @@ export default function App() {
             </Text>
           </View>
         </View>
-
-        <View style={styles.Taskbox}>
-          <View></View>
+        <View style={styles.TaskBox}>
           <View style={styles.TaskHeads}>
             <View style={styles.TaskBox1}>
               <Text style={styles.TaskboxText}>Personal Task</Text>
@@ -39,23 +37,114 @@ export default function App() {
               <Text style={styles.TaskboxText}>Team Task</Text>
             </View>
           </View>
+        </View>
 
-          <View
-            style={{
-              backgroundColor: "red",
-              height: "100%",
-              width: "100%",
-              // position: "absolute",
-            }}
-          >
-            <ScrollView></ScrollView>
+        <View>
+          <View style={{ height: "100%", width: "100%" }}>
+            <View
+              style={{
+                height: "100%",
+                width: "90%",
+                alignSelf: "center",
+                flex: 1,
+              }}
+            >
+              <ScrollView>
+                <View
+                  style={{
+                    height: "10%",
+                    width: "100%",
+                    backgroundColor: "#8a7bd2",
+                    elevation: 5,
+                    borderRadius: 10,
+                    marginBottom: 10,
+                  }}
+                >
+                  <View
+                    style={{
+                      height: "100%",
+                      width: "20%",
+                      backgroundColor: "lightgreen",
+                    }}
+                  ></View>
+                </View>
+                <View
+                  style={{
+                    height: "10%",
+                    width: "100%",
+                    backgroundColor: "#8a7bd2",
+                    borderRadius: 10,
+                    marginBottom: 10,
+                  }}
+                ></View>
+                <View
+                  style={{
+                    height: "10%",
+                    width: "100%",
+                    backgroundColor: "#8a7bd2",
+                    elevation: 5,
+                    borderRadius: 10,
+                    marginBottom: 10,
+                  }}
+                ></View>
+                <View
+                  style={{
+                    height: "10%",
+                    width: "100%",
+                    backgroundColor: "#8a7bd2",
+                    elevation: 5,
+                    borderRadius: 10,
+                    marginBottom: 10,
+                  }}
+                ></View>
+                <View
+                  style={{
+                    height: "10%",
+                    width: "100%",
+                    backgroundColor: "#8a7bd2",
+                    elevation: 5,
+                    borderRadius: 10,
+                    marginBottom: 10,
+                  }}
+                ></View>
+                <View
+                  style={{
+                    height: "10%",
+                    width: "100%",
+                    backgroundColor: "#8a7bd2",
+                    elevation: 5,
+                    borderRadius: 10,
+                    marginBottom: 10,
+                  }}
+                ></View>
+                <View
+                  style={{
+                    height: "10%",
+                    width: "100%",
+                    backgroundColor: "#8a7bd2",
+                    elevation: 5,
+                    borderRadius: 10,
+                    marginBottom: 10,
+                  }}
+                ></View>
+                <View
+                  style={{
+                    height: "10%",
+                    width: "100%",
+                    backgroundColor: "#8a7bd2",
+                    elevation: 5,
+                    borderRadius: 10,
+                    marginBottom: 10,
+                  }}
+                ></View>
+              </ScrollView>
+            </View>
           </View>
         </View>
       </View>
     </SafeAreaView>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -86,7 +175,7 @@ const styles = StyleSheet.create({
     width: "80%",
     backgroundColor: "#8a7bd2",
     alignSelf: "center",
-    borderRadius: 20,
+    borderRadius: 10,
     justifyContent: "center",
     padding: 30,
     elevation: 20,
@@ -97,7 +186,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    fontFamily: "RobotoLight",
     marginBottom: 5,
     color: "white",
   },
@@ -106,20 +194,26 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 
+  TaskBox: {
+    height: "10%",
+    width: "80%",
+    // backgroundColor: "plum",
+    alignSelf: "center",
+  },
+
   TaskHeads: {
     flexDirection: "row",
     justifyContent: "left",
-    backgroundColor: "rgba(255, 255, 255, 0.25)",
-    height: "12%",
-    width: "80%",
-    alignSelf: "center",
-    marginTop: 20,
-    opacity: "25%",
-    borderRadius: "10",
+    // backgroundColor: "black",
+    height: "70%",
+    width: "100%",
+    alignItems: "center",
+    marginTop: 10,
+    borderRadius: 10,
   },
 
   TaskBox1: {
-    height: "80%",
+    height: "100%",
     width: "40%",
     backgroundColor: "#8a7bd2",
     borderRadius: 10,
@@ -130,10 +224,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  Taskbox: {},
   TaskboxText: {
     color: "white",
     fontStyle: "italic",
     fontWeight: "bold",
   },
+
+  // CreateButton: {
+
+  // },
+
+  // CreateBtuText: {
+
+  // },
 });
