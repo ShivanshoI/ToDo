@@ -6,10 +6,13 @@ import {
   View,
   Button,
   ScrollView,
+  Dimensions,
+  TouchableOpacity,
 } from "react-native";
 
 export default function App() {
   return (
+    
     <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
         <StatusBar style="auto" />
@@ -39,108 +42,34 @@ export default function App() {
           </View>
         </View>
 
-        <View>
-          <View style={{ height: "100%", width: "100%" }}>
-            <View
-              style={{
-                height: "100%",
-                width: "90%",
-                alignSelf: "center",
-                flex: 1,
-              }}
-            >
-              <ScrollView>
-                <View
-                  style={{
-                    height: "10%",
-                    width: "100%",
-                    backgroundColor: "#8a7bd2",
-                    elevation: 5,
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                >
-                  <View
-                    style={{
-                      height: "100%",
-                      width: "20%",
-                      backgroundColor: "lightgreen",
-                    }}
-                  ></View>
+            <View style={{ flex: 1 }}>
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+        <View style={{ height: "100%", width: "100%", justifyContent: "center", alignItems: "center" }}>
+          <View style={{ height: "100%", width: "90%", alignSelf: "center" }}>
+            <View style={styles.TaskDetailBox}>
+              <View style={styles.TaskDetailBase} />
+              <View style={styles.TaskDetailPos}>
+                <Text style={[styles.text, { marginLeft: 15 }]}>Heading</Text>
+                <View style={{ flex: 1, alignItems: "flex-end" }}>
+                  <Text style={{ fontSize: 12, marginRight: 25 }}>
+                    End Date
+                  </Text>
                 </View>
-                <View
-                  style={{
-                    height: "10%",
-                    width: "100%",
-                    backgroundColor: "#8a7bd2",
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                ></View>
-                <View
-                  style={{
-                    height: "10%",
-                    width: "100%",
-                    backgroundColor: "#8a7bd2",
-                    elevation: 5,
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                ></View>
-                <View
-                  style={{
-                    height: "10%",
-                    width: "100%",
-                    backgroundColor: "#8a7bd2",
-                    elevation: 5,
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                ></View>
-                <View
-                  style={{
-                    height: "10%",
-                    width: "100%",
-                    backgroundColor: "#8a7bd2",
-                    elevation: 5,
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                ></View>
-                <View
-                  style={{
-                    height: "10%",
-                    width: "100%",
-                    backgroundColor: "#8a7bd2",
-                    elevation: 5,
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                ></View>
-                <View
-                  style={{
-                    height: "10%",
-                    width: "100%",
-                    backgroundColor: "#8a7bd2",
-                    elevation: 5,
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                ></View>
-                <View
-                  style={{
-                    height: "10%",
-                    width: "100%",
-                    backgroundColor: "#8a7bd2",
-                    elevation: 5,
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                ></View>
-              </ScrollView>
+              </View>
             </View>
+            {/* Add more content here to make the ScrollView scrollable */}
+            <View style={{ height: 1000 }} />
           </View>
         </View>
+      </ScrollView>
+    </View>
+        
+        <View style={styles.addTaskBox}>
+          <TouchableOpacity style={styles.addTaskButton}>
+            <Text style={styles.addTaskText}>Add New Task</Text>
+          </TouchableOpacity>
+        </View>
+
       </View>
     </SafeAreaView>
   );
@@ -196,7 +125,7 @@ const styles = StyleSheet.create({
 
   TaskBox: {
     height: "10%",
-    width: "80%",
+    width: "90%",
     // backgroundColor: "plum",
     alignSelf: "center",
   },
@@ -230,8 +159,56 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 
-  // CreateButton: {
+  TaskDetailBox: {
+    height: 120,
+    width: "90%",
+    backgroundColor: "#8a7bd2",
+    alignSelf: "center",
+    borderRadius: 10,
+    elevation: 10,
+    marginBottom: 10,
+  },
+  TaskDetailBase: {
+    height: 20,
+    width: 20,
+    borderRadius: 50,
+    alignItems: "flex-end",
+    backgroundColor: "white",
+    position: "absolute",
+  },
+  TaskDetailPos: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+  },
 
+  addTaskBox: {
+    position: 'absolute',
+    bottom: 10,
+    left: '25%',
+    width: '50%', // Set width if desired
+    padding: 16,
+    backgroundColor: '#8a7bd2',
+    borderRadius: 10,
+    elevation: 4,
+  },
+  addTaskButton: {
+    flex: 1, 
+    justifyContent: 'center',  
+    alignItems: 'center',  
+  },
+  addTaskText: {
+    fontSize: 18,  
+    color: '#fff', 
+    fontWeight: 'bold',  
+  },
+  // CreateButton: {
+  //   height: "50%",
+  //   width: "80%",
+  //   justifyContent: "center",
+  //   backgroundColor: "#8a7bd2",
   // },
 
   // CreateBtuText: {
